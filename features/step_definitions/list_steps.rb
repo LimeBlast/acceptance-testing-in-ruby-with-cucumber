@@ -1,5 +1,4 @@
 Given(/^I have the following elements$/) do |table|
-  puts table.hashes
   table.hashes.each do |element|
     Store.add element
   end
@@ -15,6 +14,4 @@ end
 
 Transform /table:id,name/ do |table|
   table.map_column!(:id) { |cell| cell.to_i }
-  table.map_headers!('id' => 'MY ID') { |header| header.upcase }
-  table
 end
