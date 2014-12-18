@@ -7,5 +7,5 @@ When(/^I add (\d+) and (\d+)$/) do |arg1, arg2|
 end
 
 Then(/^the result should be (\d+)$/) do |arg1|
-  assert_equal(@result, arg1.to_i)
+  @result.must_equal arg1.to_i
 end
