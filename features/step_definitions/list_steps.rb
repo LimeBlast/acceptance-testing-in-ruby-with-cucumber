@@ -1,5 +1,4 @@
 Given(/^I have the following elements$/) do |table|
-  table.map_column!(:id) { |cell| cell.to_i }
   table.hashes.each do |element|
     Store.add element
   end
@@ -11,4 +10,8 @@ end
 
 Then(/^I should get "([^"]*)"$/) do |name|
   expect(@result['name']).to eq name
+end
+
+Transform /table:id,name/ do |table|
+  table.map_column!(:id) { |cell| cell.to_i }
 end
