@@ -23,6 +23,10 @@ When(/^I multiply (\d+) and (\d+)$/) do |arg1, arg2|
   @result = @calculator.multiply arg1.to_i, arg2.to_i
 end
 
+When(/^I subtract (\d+) and (\d+)$/) do |arg1, arg2|
+  @result = @calculator.subtract arg1, arg2
+end
+
 Then(/^the result should be (\d+)$/) do |expected|
   @result.must_equal expected
 end

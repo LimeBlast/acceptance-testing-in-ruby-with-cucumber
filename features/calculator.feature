@@ -14,3 +14,12 @@ Feature: Calculator
   Scenario: Multiplay two numbers
     When I multiply 2 and 3
     Then the result should be 6
+
+  Scenario Outline: Subtract two numbers
+    When I subtract <number1> and <number2>
+    Then the result should be <result>
+
+    Examples:
+      | number1 | number2 | result |
+      | 9       | 2       | 7      |
+      | 15      | 10      | 5      |
