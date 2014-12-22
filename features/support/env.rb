@@ -11,3 +11,9 @@ end
 After do |scenario|
   Cucumber.wants_to_quit = true if scenario.failed?
 end
+
+Around do |scenario, block|
+  ap 'Running scenario'
+  block.call
+  ap 'Done'
+end
