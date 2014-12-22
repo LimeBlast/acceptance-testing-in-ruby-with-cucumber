@@ -16,11 +16,11 @@ Given(/^I can multiply numbers$/) do
 end
 
 When(/^I add (\d+) and (\d+)$/) do |arg1, arg2|
-  @result = @calculator.add arg1.to_i, arg2.to_i
+  @result = @calculator.add arg1, arg2
 end
 
 When(/^I multiply (\d+) and (\d+)$/) do |arg1, arg2|
-  @result = @calculator.multiply arg1.to_i, arg2.to_i
+  @result = @calculator.multiply arg1, arg2
 end
 
 When(/^I subtract (\d+) and (\d+)$/) do |arg1, arg2|
