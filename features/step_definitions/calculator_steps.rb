@@ -2,6 +2,11 @@ Given(/^I have a calculator$/) do
   @calculator = Calculator.new
 end
 
+Given(/^I can add and multiply$/) do
+  expect(@calculator).to respond_to :add
+  expect(@calculator).to respond_to :multiply
+end
+
 When(/^I add (\d+) and (\d+)$/) do |arg1, arg2|
   @result = @calculator.add arg1.to_i, arg2.to_i
 end
