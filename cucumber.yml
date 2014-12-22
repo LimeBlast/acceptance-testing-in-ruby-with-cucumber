@@ -1,4 +1,4 @@
 <% common = "-r lib -r features" %>
-default: <%= common %>
+default: -p unit
 unit: --format progress <%= common %>
 html: --format html -o cucumber.html <%= common %>
