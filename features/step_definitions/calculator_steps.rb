@@ -3,7 +3,15 @@ Given(/^I have a calculator$/) do
 end
 
 Given(/^I can add and multiply$/) do
+  step 'I can add numbers'
+  step 'I can multiply numbers'
+end
+
+Given(/^I can add numbers$/) do
   expect(@calculator).to respond_to :add
+end
+
+Given(/^I can multiply numbers$/) do
   expect(@calculator).to respond_to :multiply
 end
 
