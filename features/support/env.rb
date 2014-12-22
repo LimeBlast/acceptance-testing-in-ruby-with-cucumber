@@ -1,5 +1,7 @@
 require 'awesome_print'
 
-AfterStep do
-  ap 'someting darkside'
+ap 'beginning the whole suite'
+
+at_exit do
+  ap 'ending the whole suite'
 end
