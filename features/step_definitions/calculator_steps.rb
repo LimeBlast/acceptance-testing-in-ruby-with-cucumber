@@ -27,6 +27,10 @@ When(/^I subtract (\d+) and (\d+)$/) do |arg1, arg2|
   @result = @calculator.subtract arg1, arg2
 end
 
+When(/^I divide (\d+) by (\d+)$/) do |arg1, arg2|
+  @result = @calculator.divide arg1, arg2
+end
+
 Then(/^the result should be (\d+)$/) do |expected|
   @result.must_equal expected
 end

@@ -11,7 +11,7 @@ Feature: Calculator
     When I add 2 and 3
     Then the result should be 5
 
-  Scenario: Multiplay two numbers
+  Scenario: Multiply two numbers
     When I multiply 2 and 3
     Then the result should be 6
 
@@ -23,3 +23,7 @@ Feature: Calculator
       | number1 | number2 | result |
       | 9       | 2       | 7      |
       | 15      | 10      | 5      |
+
+  Scenario: Dividing two numbers
+    When I divide 9 by 3
+    Then the result should be 3
