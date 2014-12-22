@@ -1,5 +1,5 @@
 require 'awesome_print'
 
-Before("@wip") do |scenario|
-  # do something here
+AfterStep do
+  ap 'someting darkside'
 end
