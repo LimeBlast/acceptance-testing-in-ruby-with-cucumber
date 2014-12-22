@@ -1,19 +1,5 @@
 require 'awesome_print'
 
-Before do |scenario|
-  if scenario.class.to_s.include? 'Scenario'
-    ap scenario.title
-  else
-    ap scenario.scenario_outline.title
-  end
-end
-
-After do |scenario|
-  Cucumber.wants_to_quit = true if scenario.failed?
-end
-
-Around do |scenario, block|
-  ap 'Running scenario'
-  block.call
-  ap 'Done'
+Before("@wip") do |scenario|
+  # do something here
 end
